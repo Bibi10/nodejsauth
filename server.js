@@ -2,7 +2,8 @@ var express	= require('express');
 var app		= express();
 var port	= process.env.PORT || 8080;
 var db		= require('./config/db');
-//var passport	= require('./config/passport');
+var mysqlModel  = require('mysql-model');
+var passport	= require('./config/passport');
 var flash	= require('connect-flash');
 
 var morgan		= require('morgan');
@@ -26,6 +27,7 @@ var session     	= require('express-session');
 	// routes
 	require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
-	// launch ======================================================================
-	app.listen(port);
+	// launch 
+
+    	app.listen(port);
 	console.log('The magic happens on port ' + port);
