@@ -9,3 +9,17 @@ var morgan		= require('morgan');
 var cookieParser 	= require(cookie-parser');
 var bodyParser		= require('body-parser');
 var session     	= require('express-session');
+
+ app.use(morgan('dev')); // log every request to the console
+    app.use(cookieParser()); // read cookies (needed for auth)
+    app.use(bodyParser.json()); 
+        app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.set('view engine', 'jade'); // set up jade for templating
+
+    // required for passport
+    app.use(session({ secret: 'imbibixessongdjafalo' }));
+    app.use(passport.initialize());
+    app.use(passport.session()); 
+    app.use(flash()); 
+
