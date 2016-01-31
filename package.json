@@ -1,0 +1,22 @@
+{
+  "name": "nodejsauth",
+  "main": "server.js",
+	"private": "true",  
+"dependencies" : {
+    "express" : "latest",           
+    "jade" : "latest",               
+    "mongoose" : "latest",          
+    "passport" : "latest",         
+    "passport-local" : "latest",    
+    "passport-facebook" : "latest", 
+    "passport-twitter" : "latest",  
+    "passport-google-oauth" : "latest",
+    "connect-flash" : "latest",     
+    "bcrypt-nodejs" : "latest",
+
+    "morgan": "latest",
+    "body-parser": "latest",
+    "cookie-parser": "latest",
+    "express-session": "latest"
+  }
+}
